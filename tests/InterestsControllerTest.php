@@ -19,7 +19,7 @@ class InterestsControllerTest extends TestCase
     {
         $data = $this->call('GET', 'api/1.0/interests');
         $content = json_decode($data->content(), true);
-        $this->assertEquals($content['count'],1819);
+        $this->assertEquals($content['count'],1820);
         $this->assertEquals($content['count'],count($content['interests']));
         $this->assertEquals($content['status'],200);
     }
@@ -125,7 +125,7 @@ class InterestsControllerTest extends TestCase
         $data = $this->interestController->getAllResearchInterests();
         $this->assertEquals($data->status(),200);
         $content = json_decode($data->content(),true);
-        $this->assertEquals($content['count'],1307);
+        $this->assertEquals($content['count'],1308);
         $this->assertEquals(count($content['interests']),$content['count']);
     }
 
